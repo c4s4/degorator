@@ -1,0 +1,12 @@
+# NeON Build File (http://github.com/c4s4/neon)
+
+default: run
+extends:
+- c4s4/build/golang.yml
+
+properties:
+  NAME:     'degorator'
+  VERSION:  '1.0.0'
+  RUN_ARGS: ['config.yml']
+  LIBRARIES:
+  - 'github.com/gin-gonic/gin'

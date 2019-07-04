@@ -1,0 +1,15 @@
+port: 8000
+users:
+- name:  test
+  token: ABCDEF
+operations:
+- path:   /hello
+  method: GET
+  parameters:
+    name:
+        optional: false
+        regexp:   '^[a-zA-Z0-9]+$'
+  target:
+    path: /hello
+target:
+  host: http://127.0.0.1:8080
